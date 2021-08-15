@@ -1,5 +1,5 @@
-# markov-tweet
-Automatically generate and tweet sentences like your daily tweets by using markov-chain.
+# markov-note
+Automatically generate and post sentences to Misskey like your daily tweets by using markov chain.
 
 ## Dependencies
 - Python 3.x
@@ -62,9 +62,6 @@ This definition make this bot run every 20 minutes. (`*:00`, `*:20`, `*:40`)
 
 ## References
 - https://github.com/o-tomox/TextGenerator
-
-## Example
-- [@yuderobot](https://twitter.com/yuderobot)
 
 ## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
