@@ -1,9 +1,10 @@
 version: '3'
 services:
-    markov-tweet:
+    markov-note:
         restart: always
-        container_name: markov-tweet
-        image: yude/markov-tweet:latest
+        container_name: markov-note
+        build: .
+        image: yude/markov-note:latest
         volumes:
           - "./data:/app/data"
         environment:
