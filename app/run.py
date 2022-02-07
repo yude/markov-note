@@ -1,24 +1,20 @@
 #-*- coding: utf-8 -*-
 
-import tweepy
+from misskey import Misskey
 import subprocess
 import json
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
 
-# Import keys from .env
+# Load token from .env
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
-CK = os.environ.get("CK")
-CS = os.environ.get("CS")
-AT = os.environ.get("AT")
-AS = os.environ.get("AS")
+TOKEN = os.environ.get("TOKEN")
+INSTANCE = os.environ.get("INSTANCE")
 
-# Generate Twitter objects
-auth = tweepy.OAuthHandler(CK, CS)
-auth.set_access_token(AT, AS)
-api = tweepy.API(auth)
+# Initialize Misskey.py
+mk = Misskey(INSTANCE, i=TOKEN)
 
 # Run generator
 def res_cmd(cmd):
@@ -48,7 +44,9 @@ def main():
   result = remover(result)
 
   # Call Twitter API to tweet
-  api.update_status(result)
+  mk.notes_create(
+    text=result
+  )
 
 if __name__ == '__main__':
   main()

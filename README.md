@@ -6,7 +6,7 @@ Automatically generate and post sentences to Misskey like your daily tweets by u
 - pandas
 - MeCab
 - mecab-python3
-- tweepy
+- Misskey.py
 
 ## Setup
 ### Docker (Docker Compose)

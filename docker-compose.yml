@@ -8,10 +8,9 @@ services:
         volumes:
           - "./data:/app/data"
         environment:
-          # Twitter API related
-          - CK=
-          - CS=
-          - AT=
-          - AS=
+          # Misskey instance
+          - INSTANCE=
+          # Misskey API token
+          - TOKEN=
           # Length of sentence
           - N=1
