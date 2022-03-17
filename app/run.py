@@ -43,7 +43,7 @@ def main():
   # Remove risky words from result
   result = remover(result)
 
-  # Call Twitter API to tweet
+  # Call Misskey.py to tweet
   mk.notes_create(
     text=result
   )
